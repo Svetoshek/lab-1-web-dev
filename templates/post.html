@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% block title %}
+<header>
+    <h2>{{ post['title'] }} </h2>
+    <h4>{{ post['author'] }} {{ post.date.strftime('%d.%m.%Y')}} </h4>
+</header>
+<img class="img_post" src="{{ url_for('static', filename='img/' ~ post.img_id ~ '.jpg')}}">
+<p class="text_post">{{ post['text']}}</p>
+{% endblock %}
+<p>{{ post['content'] }}</p>
+<div class="block-comment">
+    <form action="/post/" id="field">
+        <h2>Оставьте коментарий</h2>
+        <div class="area">
+            <textarea type="text" name="text-comment" id="area" cols="155" rows="3"></textarea>
+        </div>
+    </form>
+    <div class="button">
+        <button type="button" class="btn btn-primary">Отправить</button>
+    </div>
+    <div class="row">
+        {% for comment in comments_list %}
+        <div class="col-1">
+            <img class="img_comments" src="{{ url_for('static', filename='img/' ~ comment.comment_img ~ '.jpg')}}">
+        </div>
+        <div class="col-11">
+            <h4>{{ comment['person'] }}</h4>
+            <p class="text">{{ comment['comment']}}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<span class="badge badge-primary">{{ post['created'] }}</span>
+{% endblock %}

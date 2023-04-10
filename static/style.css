@@ -1,0 +1,66 @@
+.avatar_img {
+    max-width: 100%;
+}
+
+.img_post,
+.text_post {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img_post {
+    width: 70%;
+}
+
+
+header,
+.text_post {
+    margin: 0px 6rem 0px 6rem;
+}
+
+.text_post {
+    margin-top: 2rem;
+    font-size: 16px;
+}
+
+.block-comment h2 {
+    background-color: #F7F7F7;
+    width: 90%;
+    margin: 5px 0px 0px 6rem;
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid #EFEFEF;
+}
+
+#area {
+    width: 100%;
+}
+
+.area,
+.button {
+    width: 90%;
+    margin: 0rem 6rem 0px 6rem;
+    padding: 10px 0px 0px 20px;
+    background-color: white;
+    border: 1px solid #EFEFEF;
+}
+
+
+div .button {
+    padding: 10px 0px 10px 20px;
+    margin-bottom: 20px;
+}
+
+.img_comments {
+    width: 40px;
+    height: 40px;
+    margin: 0rem 2rem 0px 7rem;
+    border: 1px solid white;
+    border-radius: 20px;
+    background: #808080;
+}
+
+.text {
+    font-size: 16px;
+}
